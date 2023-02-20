@@ -1,9 +1,6 @@
 public class Bet {
 
-    @Override
-    public String toString() {
-        return "Bet " + this.getMoney() + "€ on " + this.getPilotName();
-    }
+    
 
 
     private String PilotName;
@@ -32,6 +29,11 @@ public class Bet {
             }
         }
         return 0;
+    }
+    
+    @Override
+    public String toString() {
+        return "Bet " + this.getMoney() + "€ on " + this.getPilotName();
     }
 }
 
