@@ -1,5 +1,11 @@
 public class Bet {
 
+    @Override
+    public String toString() {
+        return "Bet " + this.getMoney() + "€ on " + this.getPilotName();
+    }
+
+
     private String PilotName;
     private int Money;
     
