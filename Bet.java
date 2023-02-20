@@ -1,11 +1,12 @@
-public class Bet extends Viewer {
+public class Bet {
 
     private String PilotName;
     private int Money;
     
     
-    public Bet(String name, int money) {
-        super(name, money);
+    public Bet(String pilotName, int money) {
+        this.PilotName = pilotName;
+        this.Money = money;
     }
     
     
@@ -18,11 +19,13 @@ public class Bet extends Viewer {
     }
     
 
-    public Vehicle[] Win(int mise) {
-        if (Vehicle[PilotName] <= 3) {
-            Money *= 2;
+    public int Win(Vehicle[] ranking) {
+        for (int i = 0; i < 3; i++) {
+            if (ranking[i].getPilotName().equals(PilotName)) {
+                return 2 * Money;
+            }
         }
-        Money 
+        return 0;
     }
 }
 
