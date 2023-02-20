@@ -1,12 +1,9 @@
+import java.util.Random;
+
 public class Bike extends Vehicle {
 
-    private int Speed;
-    private int Adhesion;
-    private String pilotName;
-
-    public Bike(int speed, int adhesion, String pilotName) {
-        super(speed, adhesion, pilotName);
-        this.pilotName = pilotName;
+    public Bike(String pilotName) {
+        super(new Random().nextInt((5 - 1) + 1), new Random().nextInt((5 - 1) + 1), pilotName);
     }
 
 
@@ -44,7 +41,7 @@ public class Bike extends Vehicle {
 
     @Override
     public String toString() {
-        return "This BIKE is " + getSpeedString()+ ", it has a " + getSpeed() + " speed value, and it " + getAdehsionString() + " with a " + getAdhesion() + " value of adhesion";
+        return "This BIKE is " + this.getSpeedString()+ ", it has a " + this.getSpeed() + " speed value, and it " + this.getAdehsionString() + " with a " + this.getAdhesion() + " value of adhesion";
     }
     
 }

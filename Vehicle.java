@@ -23,15 +23,15 @@ public abstract class Vehicle {
         if (Out == 0) {
             int avancee = Speed * (11 - Adhesion);
             DistanceTraveled += avancee;
-            accident();
+            Accident();
         } else {
             Out++;
         }
     }
 
     public void Accident() {
-        
-        int n = Math.random(10) + 1;
+        Random rand = new Random();
+        int n = rand.nextInt(10) + 1;
         if (n > Adhesion) {
             Out = n - Adhesion;
         }

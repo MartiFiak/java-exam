@@ -1,11 +1,9 @@
+import java.util.Random;
+
 public class Kart extends Vehicle {
 
-    private int speed;
-    private int adhesion;
-    private String pilotName;
-    
     public Kart(String pilotName) {
-        super(Speed, Adhesion, pilotName);
+        super(new Random().nextInt((10 - 5) + 5), new Random().nextInt((10 - 5) + 5), pilotName);
     }
 
 
@@ -44,7 +42,7 @@ public class Kart extends Vehicle {
 
     @Override
     public String toString() {
-        return "This KART is " + getSpeedString() + ", it has a " + getSpeed() + " speed value, and it " + getAdehsionString() + " with a " + getAdhesion() + " value of adhesion";
+        return "This KART is " + this.getSpeedString() + ", it has a " + this.getSpeed() + " speed value, and it " + this.getAdehsionString() + " with a " + this.getAdhesion() + " value of adhesion";
     }
     
 }
