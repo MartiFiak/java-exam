@@ -4,8 +4,6 @@ public class Viewer {
     private int Money;
     private Bet Bet;
     
-    
-    
 
     public Viewer(String name, int money) {
         Name = name;

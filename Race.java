@@ -1,7 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Race extends Vehicle  {
+public class Race {
 
     public int MinVehicle;
     public int MaxVehicle;
@@ -9,8 +10,7 @@ public class Race extends Vehicle  {
     public List<Viewer> AllViewers;
     
     
-    public Race(int speed, int adhesion, String pilotName) {
-        super(speed, adhesion, pilotName);
+    public Race(int MinVehicle, int MaxVehicle) {
         this.MinVehicle = MinVehicle;
         this.MaxVehicle = MaxVehicle;
         this.AllVehicles = new ArrayList<Vehicle>();
@@ -26,7 +26,9 @@ public class Race extends Vehicle  {
         this.AllViewers.add(viewer);
     }
 
-    public Vehicle[] StartRace(void start) {
-
+    public Vehicle[] StartRace() {
+        if (AllVehicles.size() < MinVehicle) {
+            throw new IllegalStateExecption();
+        }
     }
 }
